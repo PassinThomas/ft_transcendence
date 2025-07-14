@@ -4,15 +4,15 @@ import { Footer } from '@components/layout/Footer'
 
 export class App {
   private router: Router //instanciation du routeur pour la navigation SPA
-  private header: Header 
-  private footer: Footer
+  private header: Header  //instanciation de l'en-tête
+  private footer: Footer  //instanciation du pied de page
 
   
   constructor(router: Router) { 
     this.router = router
     this.header = new Header()
     this.footer = new Footer()
-  }
+  } 
 
   mount(selector: string): void {
     const appElement = document.querySelector(selector)
@@ -32,7 +32,10 @@ export class App {
     `
 
 
+    
     this.header.mount('#header')
     this.footer.mount('#footer')
   }
 }
+
+
