@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
@@ -14,15 +18,16 @@
     "@fastify/swagger": "^9.5.1",
     "@fastify/swagger-ui": "^5.2.3",
     "@fastify/websocket": "^11.1.0",
+    "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
     "fastify": "^5.3.3",
     "fastify-plugin": "^4.5.1",
-    "socket.io": "^4.7.4",
-    "zod": "^3.22.4"
+    "socket.io": "^4.7.4"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.8.0",
+    "prisma": "^5.22.0",
     "tsx": "^4.6.0",
     "typescript": "^5.2.2"
   }
