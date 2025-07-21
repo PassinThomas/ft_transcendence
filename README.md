@@ -7,8 +7,30 @@ A modern Pong game with multiplayer capabilities, built with TypeScript, Node.js
 ### Prerequisites
 - Docker & Docker Compose
 - Make (for easy command management)
+- Node.js & npm (for local development dependencies)
 
-### Development
+### Quick Setup
+
+**Option 1: Automated Setup (Recommended)**
+```bash
+./setup.sh               # Installs all dependencies automatically
+make dev                 # Start development environment
+```
+
+**Option 2: Manual Setup**
+1. **Install local dependencies** (required for volume mounting):
+```bash
+# Install backend dependencies
+cd backend && npm install
+
+# Install frontend dependencies  
+cd ../frontend && npm install
+
+# Return to project root
+cd ..
+```
+
+2. **Start development environment**:
 ```bash
 make dev              # Start development environment
 ```

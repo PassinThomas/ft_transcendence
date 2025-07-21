@@ -5,6 +5,7 @@ services:
       - "8080:8080" # Hot reload : http://localhost:8080
     volumes:
       - ./frontend:/app
+      - /app/node_modules  # Prevent overriding container's node_modules
     command: npm run dev
     depends_on:
       - backend
@@ -15,6 +16,7 @@ services:
       - "3000:3000" # API accessible directement : http://localhost:3000
     volumes:
       - ./backend:/app
+      - /app/node_modules  # Prevent overriding container's node_modules
     environment:
       - NODE_ENV=development
       - DATABASE_URL=sqlite:./database.db
