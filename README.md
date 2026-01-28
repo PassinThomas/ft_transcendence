@@ -53,7 +53,7 @@ Make
 ### Démarrage rapide
 ```bash
 # Cloner le repository
-git clone https://github.com/alesshardy/ft_transcendence.git
+git clone https://github.com/PassinThomas/ft_transcendence.git
 cd ft_transcendence
 
 # Lancer l'application en production
